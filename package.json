@@ -81,8 +81,8 @@
     "webpack-cli": "^4.8.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "react-scripts build",
+    "start": "node node_modules/react-scripts/bin/react-scripts start",
+    "build": "node node_modules/react-scripts/bin/react-scripts build",
     "test": "node node_modules/react-scripts/bin/react-scripts test",
     "eject": "node node_modules/react-scripts/bin/react-scripts eject",
     "lint": "prettier --check .",

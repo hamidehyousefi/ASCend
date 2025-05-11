@@ -36,7 +36,7 @@ const App: React.FC<Props> = ({basename}) => {
       <ThemeProvider theme={theme}>
         <Suspense fallback={<LayoutSplashScreen />}>
           <ReactNotifications />
-          <HashRouter basename={basename}>
+          <HashRouter basename='/'>
             <LayoutProvider>
               <AppRoutes />
             </LayoutProvider>
