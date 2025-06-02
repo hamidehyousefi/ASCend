@@ -17,11 +17,11 @@ export const AppRoutes: FC = () => {
         <Route index element={<Navigate to='/home' />} />
         {isLoggedIn ? (
           <>
-            <Route path='auth' element={<Navigate to='/admin/dashboard' />} />
+            <Route path='auth' element={<Navigate to='/home' />} />
           </>
         ) : (
           <>
-            <Route path='admin/*' element={<Navigate to='/auth' />} />
+            <Route path='admin/*' element={<Navigate to='/home' />} />
             <Route path='auth' element={<LoginPage />} />
           </>
         )}

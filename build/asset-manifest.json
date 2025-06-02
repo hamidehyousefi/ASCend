@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.5c6cc1aa.css",
-    "main.js": "/static/js/main.a731ce28.js",
+    "main.js": "/static/js/main.6d555613.js",
+    "static/media/bg5.gif": "/static/media/bg5.0821aef95dacf02abe96.gif",
     "static/media/la-brands-400.svg": "/static/media/la-brands-400.928495fae14841a0d610.svg",
     "static/media/la-solid-900.svg": "/static/media/la-solid-900.a813034654b4ff0a0bac.svg",
     "static/media/fa-solid-900.svg": "/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
     "static/media/fa-brands-400.svg": "/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
-    "static/media/question-mark-4.gif": "/static/media/question-mark-4.75de4d66f2db34c696b2.gif",
     "static/media/la-solid-900.eot": "/static/media/la-solid-900.4184d740eae2fb727bfe.eot",
     "static/media/la-solid-900.ttf": "/static/media/la-solid-900.279f38601f1d1655255f.ttf",
     "static/media/fa-solid-900.eot": "/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
@@ -44,10 +44,10 @@
     "static/media/la-regular-400.woff2": "/static/media/la-regular-400.8dc1cedf1f4987f82b72.woff2",
     "index.html": "/index.html",
     "main.5c6cc1aa.css.map": "/static/css/main.5c6cc1aa.css.map",
-    "main.a731ce28.js.map": "/static/js/main.a731ce28.js.map"
+    "main.6d555613.js.map": "/static/js/main.6d555613.js.map"
   },
   "entrypoints": [
     "static/css/main.5c6cc1aa.css",
-    "static/js/main.a731ce28.js"
+    "static/js/main.6d555613.js"
   ]
 }

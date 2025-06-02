@@ -58,7 +58,7 @@ export function HeaderWrapper() {
 
         <div className='d-flex align-items-center flex-grow-1 flex-lg-grow-0'>
           <Link to='/' className='d-lg-none'>
-            <img alt='Logo' src={toAbsoluteUrl('/media/logos/logo_dark.png')} className='h-30px' />
+            {/* <img alt='Logo' src={toAbsoluteUrl('/media/logos/logo_dark.png')} className='h-30px' /> */}
           </Link>
         </div>
 
@@ -86,13 +86,13 @@ export function HeaderWrapper() {
                   // id='#kt_header_menu'
                   // data-kt-menu='true'
                 >
-                  <Link to='/'>
+                  {/* <Link to='/'>
                     <img
                       alt='Logo'
                       src={toAbsoluteUrl('/media/logos/logo_dark.png')}
                       className='h-60px'
                     />
-                  </Link>
+                  </Link> */}
 
                   {isAdmin ? (
                     <>
@@ -115,13 +115,14 @@ export function HeaderWrapper() {
                     </>
                   ) : (
                     <>
+                      <div className='text-center align-items-center pt-5 '>
+                        {' '}
+                        <img alt='Logo' src={toAbsoluteUrl('/favicon.ico')} className='h-30px' />
+                      </div>
+
                       <MenuItem title='خانه' to='/home' />
-                      {data.length > 1 && data[1].status === 1 && (
-                        <MenuItem title='پخش زنده' to='/live' />
-                      )}
-                      <MenuItem title='فهرست ویدئوها' to='/videos/0' />
-                      <MenuItem title='تماس با ما' to='/contact' />
-                      <MenuItem title='جستجو' to='/search' />
+
+                      <MenuItem title='نمایش اطلاعات فرم ثبت‌شده' to='/follow-up' />
                     </>
                   )}
                 </div>

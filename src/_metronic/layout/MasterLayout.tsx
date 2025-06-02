@@ -5,12 +5,13 @@ import {Content} from './components/Content'
 import {PageDataProvider} from './core'
 import {useLocation, useNavigate} from 'react-router-dom'
 import {MenuComponent} from '../assets/ts/components'
-import {Footer} from './components/Footer'
+// import {Footer} from './components/Footer'
 import {Button} from 'app/components'
 import {useErrorHandler} from 'app/utils'
 // import {getConfigReq} from 'app/modules/admin/settings/api'
-import bg from '../assets/question-mark-4.gif'
+import bg from '../assets/bg5.gif'
 import {DashboardWrapper} from 'app/modules/dashboard/DashboardWrapper'
+import EnamadLogo from './components/EnamadLogo'
 
 type Props = {
   children?: any
@@ -58,7 +59,7 @@ const MasterLayout: React.FC<Props> = ({children}) => {
     <PageDataProvider>
       <div className='page d-flex flex-row flex-column-fluid'>
         <div className=' d-flex flex-column flex-row-fluid' id='kt_wrapper'>
-          {/* <HeaderWrapper /> */}
+          <HeaderWrapper />
           {location.pathname === '/home' && (
             <section
               style={{
@@ -86,7 +87,7 @@ const MasterLayout: React.FC<Props> = ({children}) => {
               <div
                 style={{
                   position: 'absolute',
-                  backgroundColor: `rgba(31, 39, 43, .3)`,
+                  backgroundColor: `rgba(31, 39, 43, .7)`,
                   top: 0,
                   left: 0,
                   bottom: 0,
@@ -95,12 +96,38 @@ const MasterLayout: React.FC<Props> = ({children}) => {
                 }}
               >
                 <div style={{marginTop: '25vh'}}>
-                  <h1 className='text-white text-center display-3'>سنجش شایستگی های استراتژیست</h1>
-                  <h1 className='text-white text-center display-3 mt-10'>(ASC) </h1>
-                  <div className='text-center mt-20'>
-                    <a href='#kt_content' style={{scrollBehavior: 'smooth'}}>
-                      <Button title='شروع' style='light' size='lg' />
-                    </a>
+                  <h2 className='text-white text-center display-3 mx-5'>
+                    آیا آماده اید شایستگی های استراتژیست ورزشی خودتان را بسنجید و پیشنهاد کاربردی
+                    دریافت کنید؟{' '}
+                  </h2>
+                  {/* <h3 className='text-white text-center display-3'> */}
+                  {/* </h3> */}
+                  {/* <div className='text-center text-white fs-3 mx-5'>
+                    {' '}
+                    سنجش شایستگی های استراتژیست در سازمان های ورزشی(SCASO)
+                  </div> */}
+                  <div className='text-center text-white fs-3 mx-5'>
+                    با‌ تکمیل این پرسشنامه می‌توانید از میزان شایستگی های استراتژیست خود در سازمان
+                    های ورزشی آگاهی بدست آورید و با بکارگیری پیشنهادهای کاربردی که ارائه می شود در
+                    جهت توسعه و ارتقا خود جهت تبدیل شدن به یک فرد استراتژیست گام بردارید. پس از
+                    تکمیل پرسشنامه، مشاهده نتایج کامل با پرداخت امن امکان پذیر است.
+                  </div>
+                  {/* <h1 className='text-white text-center display-3 mt-10'> */}
+
+                  {/* </h1> */}
+                  <div className='text-center mt-10'>
+                    <Button
+                      color='light'
+                      title='شروع پرسشنامه و تحلیل'
+                      size='lg'
+                      onClick={() => {
+                        const el = document.getElementById('kt_content')
+                        if (el) {
+                          el.scrollIntoView({behavior: 'smooth'})
+                        }
+                      }}
+                      className='m-5'
+                    />
                   </div>
                 </div>
               </div>
@@ -124,6 +151,9 @@ const MasterLayout: React.FC<Props> = ({children}) => {
                     </div>
                   </div>
                 </div> */}
+                <div className='text-center d-print-none'>
+                  <EnamadLogo />
+                </div>
               </Content>
             </div>
           </div>

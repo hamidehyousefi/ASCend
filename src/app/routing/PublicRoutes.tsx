@@ -10,21 +10,26 @@ import {ContactPage} from 'app/modules/contact'
 import {GetResult} from 'app/modules/dashboard/GetResult'
 import {DashboardWrapper} from 'app/modules/dashboard/DashboardWrapper'
 import {ErrorsPage} from 'app/modules/errors/ErrorsPage'
+import {Pay} from 'app/modules/dashboard/Pay'
+import {FollowUp} from 'app/modules/dashboard/FollowUp'
 
 export function PublicRoutes() {
   const {toggleDrawer} = useAuth()
   return (
     <>
-      {/* {toggleDrawer && <MainDrawer />} */}
+      {toggleDrawer && <MainDrawer />}
       <Routes>
-        <Route index element={<Navigate to='/home' />} />
-        <Route path='/home' element={<DashboardWrapper />} />
-        <Route path='/result' element={<GetResult />} />
-        {/* <Route path='/videos/:catId/' element={<VideosPage />} />
-        <Route path='/videos/:catId/:videoId' element={<SingleVideo />} />
-        <Route path='/search' element={<SearchVideosPage />} />
-        <Route path='/contact' element={<ContactPage />} /> */}
-        <Route path='error/*' element={<ErrorsPage />} />
+        {/* روت پیش‌فرض: اگر مسیر دقیق نباشد، به /#/home هدایت شود */}
+        <Route index element={<Navigate to='home' replace />} />
+
+        {/* مسیرهای اصلی (بدون اسلش ابتدای path) */}
+        <Route path='home' element={<DashboardWrapper />} />
+        <Route path='result' element={<GetResult />} />
+        <Route path='pay' element={<Pay />} />
+        <Route path='follow-up' element={<FollowUp />} />
+
+        {/* هر مسیر دیگری → صفحه خطا */}
+        <Route path='*' element={<ErrorsPage />} />
       </Routes>
     </>
   )

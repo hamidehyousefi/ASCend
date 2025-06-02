@@ -28,22 +28,22 @@ const AsideDefault: FC = () => {
         {/* begin::Logo */}
         {aside.theme === 'dark' && (
           <Link to='/'>
-            <img
+            {/* <img
               alt='Logo'
               className='h-25px logo'
-              src={toAbsoluteUrl('/media/logos/logo_daneshgah.png')}
-            />
+              // src={toAbsoluteUrl('/media/logos/logo_daneshgah.png')}
+            /> */}
           </Link>
         )}
-        {aside.theme === 'light' && (
-          <Link to='/'>
-            <img
-              alt='Logo'
-              className='h-25px logo'
-              src={toAbsoluteUrl('/media/logos/logo_daneshgah.png')}
-            />
-          </Link>
-        )}
+        {/* {aside.theme === 'light' && (
+          // <Link to='/'>
+          //   <img
+          //     alt='Logo'
+          //     className='h-25px logo'
+          //     src={toAbsoluteUrl('/media/logos/logo_daneshgah.png')}
+          //   />
+          // </Link>
+        )} */}
         {/* end::Logo */}
 
         {/* begin::Aside toggler */}

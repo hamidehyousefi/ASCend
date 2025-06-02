@@ -25,7 +25,7 @@ export const RadioInput: FC<Props> = ({
   className = '',
 }) => {
   return (
-    <div className={`d-flex flex-column  ${className}`}>
+    <div className={`d-flex flex-column align-items-center text-center  ${className}`}>
       <label
         className='form-check-label mb-1 '
         // style={{fontSize: '10px'}}

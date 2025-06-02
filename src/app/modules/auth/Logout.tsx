@@ -3,7 +3,7 @@ import {toAbsoluteUrl} from '_metronic/helpers'
 import {useNavigate} from 'react-router'
 import {useAuth} from './auth'
 import {Button} from 'app/components'
-import {Footer} from '_metronic/layout/components/Footer'
+// import {Footer} from '_metronic/layout/components/Footer'
 
 export function LogoutPage() {
   const navigate = useNavigate()

@@ -3,7 +3,7 @@ import {useState} from 'react'
 import {loginReq} from './apis'
 import {toAbsoluteUrl} from '_metronic/helpers'
 import {useAuth} from './auth'
-import {Footer} from '_metronic/layout/components/Footer'
+// import {Footer} from '_metronic/layout/components/Footer'
 import {Button} from 'app/components'
 import {useNavigate} from 'react-router-dom'
 
@@ -65,11 +65,11 @@ export function LoginPage() {
         <div className='w-lg-450px  p-10 mx-auto'>
           <form className='form w-100' onSubmit={handleSubmit} noValidate id='kt_login_signin_form'>
             <div className='text-center mb-5'>
-              <img
+              {/* <img
                 alt='Logo'
                 src={toAbsoluteUrl('/media/logos/logo_daneshgah.png')}
                 className='h-45px'
-              />
+              /> */}
             </div>
             <div className='text-center mb-10'>
               <div className='text-dark mb-3 fs-5'> سنجش شایستگی های استراتژیست (ASC)</div>
@@ -128,7 +128,7 @@ export function LoginPage() {
                 )}
               </button>
               <Button
-                title={'سنجش شایستگی های استراتژیست (ASC)'}
+                title={'سنجش شایستگی های استراتژیست در سازمان های ورزشی (SCASO)'}
                 className='w-100 mt-4'
                 color='success'
                 size='lg'
@@ -137,7 +137,7 @@ export function LoginPage() {
             </div>
           </form>
         </div>
-        <Footer from='login' />
+        {/* <Footer from='login' /> */}
       </div>
     </div>
   )

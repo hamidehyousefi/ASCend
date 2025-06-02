@@ -5,6 +5,7 @@ import {MenuItem} from '_metronic/layout/components/header/MenuItem'
 import {useNavigate} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import {getConfigReq} from 'app/modules/admin/settings/api'
+import {toAbsoluteUrl} from '_metronic/helpers'
 
 export function MainDrawer() {
   const {closeDrawerMenu, logout} = useAuth()
@@ -50,11 +51,12 @@ export function MainDrawer() {
             </>
           ) : (
             <>
+              <div className=' pt-5 '>
+                {' '}
+                <img alt='Logo' src={toAbsoluteUrl('/favicon.ico')} className='h-30px' />
+              </div>
               <MenuItem title='خانه' to='/home' />
-              {data.length > 1 && data[1].status === 1 && <MenuItem title='پخش زنده' to='/live' />}
-              <MenuItem title='فهرست ویدئوها' to='/videos/0' />
-              <MenuItem title='تماس با ما' to='/contact' />
-              <MenuItem title='جستجو' to='/search' />
+              <MenuItem title='نمایش اطلاعات فرم ثبت‌شده' to='/follow-up' />
             </>
           )}
         </List>
